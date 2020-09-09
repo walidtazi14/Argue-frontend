@@ -7,12 +7,15 @@ import { AppComponent } from './app.component';
 import { ValueComponent } from './value/value.component';
 import { NavComponent } from './nav/nav.component';
 import {AuthService} from './_services/auth.service';
+import {AlertifyService} from './_services/alertify.service';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       ValueComponent,
-      NavComponent
+      NavComponent,
+      RegisterComponent
    ],
    imports: [
       BrowserModule,
@@ -21,6 +24,7 @@ import {AuthService} from './_services/auth.service';
    ],
    providers: [
       AuthService,
+      AlertifyService
    ],
    bootstrap: [
       AppComponent
