@@ -14,6 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SubjectListComponent } from './subject-list/subject-list.component';
 import { FriendListComponent } from './friend-list/friend-list.component';
 import { MessageListComponent } from './message-list/message-list.component';
+import { RouterModule} from '@angular/router'
+import {appRoutes} from './routes';
 
 @NgModule({
    declarations: [			
@@ -30,7 +32,8 @@ import { MessageListComponent } from './message-list/message-list.component';
       HttpClientModule,
       FormsModule,
       BrowserAnimationsModule,
-      BsDropdownModule.forRoot()
+      BsDropdownModule.forRoot(),
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [
       AuthService,
