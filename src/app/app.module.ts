@@ -9,18 +9,28 @@ import { NavComponent } from './nav/nav.component';
 import {AuthService} from './_services/auth.service';
 import {AlertifyService} from './_services/alertify.service';
 import { RegisterComponent } from './register/register.component';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SubjectListComponent } from './subject-list/subject-list.component';
+import { FriendListComponent } from './friend-list/friend-list.component';
+import { MessageListComponent } from './message-list/message-list.component';
 
 @NgModule({
-   declarations: [
+   declarations: [			
       AppComponent,
       ValueComponent,
       NavComponent,
-      RegisterComponent
+      RegisterComponent,
+      SubjectListComponent,
+      FriendListComponent,
+      MessageListComponent
    ],
    imports: [
       BrowserModule,
       HttpClientModule,
-      FormsModule
+      FormsModule,
+      BrowserAnimationsModule,
+      BsDropdownModule.forRoot()
    ],
    providers: [
       AuthService,

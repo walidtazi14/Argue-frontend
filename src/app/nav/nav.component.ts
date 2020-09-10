@@ -23,7 +23,9 @@ export class NavComponent implements OnInit {
   }
 
   loggedIn(){
-    return this.authService.loggedIn();  }
+    console.log(this.authService.loggedIn());
+    return this.authService.loggedIn();  
+  }
   logout(){
     localStorage.removeItem('token');
     this.alertifyService.message('loggedou');
