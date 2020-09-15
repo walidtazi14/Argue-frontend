@@ -12,20 +12,26 @@ import { RegisterComponent } from './register/register.component';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SubjectListComponent } from './subject-list/subject-list.component';
-import { FriendListComponent } from './friend-list/friend-list.component';
+import { FriendListComponent } from './friends/friend-list/friend-list.component';
 import { MessageListComponent } from './message-list/message-list.component';
 import { RouterModule} from '@angular/router'
 import {appRoutes} from './routes';
+import { FriendsComponent } from './friends/friends.component';
+import { FriendCardComponent } from './friends/friend-card/friend-card.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
 
 @NgModule({
-   declarations: [			
+   declarations: [						
       AppComponent,
       ValueComponent,
       NavComponent,
       RegisterComponent,
       SubjectListComponent,
       FriendListComponent,
-      MessageListComponent
+      MessageListComponent,
+      FriendsComponent,
+      FriendCardComponent
    ],
    imports: [
       BrowserModule,
@@ -33,7 +39,8 @@ import {appRoutes} from './routes';
       FormsModule,
       BrowserAnimationsModule,
       BsDropdownModule.forRoot(),
-      RouterModule.forRoot(appRoutes)
+      RouterModule.forRoot(appRoutes),
+      FontAwesomeModule
    ],
    providers: [
       AuthService,
